@@ -23,6 +23,7 @@ FIXED_COLS = ['Date', 'Time', 'Datetime', 'eNodeB Name', 'Cell FDD TDD Indicatio
 
 
 
+
 def discrete_cmap(N, base_cmap=None):
     """Create an N-bin discrete colormap from the specified input map
        https://gist.github.com/jakevdp/91077b0cae40f8f8244a
@@ -124,6 +125,7 @@ def visualize_kpi():
     geo_df = pd.merge(gdf, df, on='Site_Sec')
     geo_df = geo_df.dropna()
     geo_df.crs = {'init':'epsg:4326'}
+
 
 
     time_ = list(geo_df['Datetime'].unique())
